@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.io.File;
+import java.util.Date;
 
 public class TestYandex {
     WebDriver driver;
@@ -27,7 +28,7 @@ public class TestYandex {
         driver.get("http://yandex.ru");
         try {
             File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(scrFile, new File("/val/main_page.png"));
+            FileUtils.copyFile(scrFile, new File("./screens/"+new Date().getTime()+".png"));
         } catch (Exception e) {
             e.printStackTrace();
         }
