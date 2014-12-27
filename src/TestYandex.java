@@ -27,7 +27,7 @@ public class TestYandex {
         driver.get("http://yandex.ru");
         try {
             File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(scrFile, new File("/tmp/scr/main_page.png"));
+            FileUtils.copyFile(scrFile, new File("/val/main_page.png"));
         } catch (Exception e) {
             e.printStackTrace();
         }
